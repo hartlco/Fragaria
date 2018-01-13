@@ -7,7 +7,7 @@
 	<key>beginCommand</key>
 	<string>&lt;</string>
 	<key>beginFirstMultiLineComment</key>
-	<string></string>
+	<string>```</string>
 	<key>beginInstruction</key>
 	<string>[</string>
 	<key>beginSecondMultiLineComment</key>
@@ -17,7 +17,7 @@
 	<key>endCommand</key>
 	<string>&gt;</string>
 	<key>endFirstMultiLineComment</key>
-	<string></string>
+	<string>```</string>
 	<key>endInstruction</key>
 	<string>]</string>
 	<key>endSecondMultiLineComment</key>
@@ -48,6 +48,6 @@
 	<key>singleLineCommentRegex</key>
 	<string>\n?\s?(?&lt;![a-zA-Z0-9/])&gt;\s</string>
 	<key>variableRegex</key>
-	<string>(\s(\*{1,2}([^*\s]*)\*\*?|_{1,2}([^_]*)__?)\s|[&amp;#]([^;\s]*);)</string>
+	<string>((\*{1,2}([^*.]*)\*\*?|_{1,2}([^_]*)__?)|[&amp;#]([^;]*);)</string>
 </dict>
 </plist>
