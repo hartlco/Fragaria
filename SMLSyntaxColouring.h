@@ -62,6 +62,8 @@ Copyright 2004-2009 Peter Borg
 /** Indicates the character ranges where colouring is valid. */
 @property (strong, readonly) NSMutableIndexSet *inspectedCharacterIndexes;
 
+@property (nonatomic, copy) void (^customColoringBlock)(NSLayoutManager *layoutManager, NSRange range);
+
 
 /// @name Properties - Appearance and Behavior
 

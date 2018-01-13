@@ -246,5 +246,6 @@
 /** Indicates the current insertion point color. */
 @property (nonatomic, assign) NSColor *insertionPointColor;
 
+@property (nonatomic, copy) void (^customColoringBlock)(NSLayoutManager *layoutManager, NSRange range);
 
 @end

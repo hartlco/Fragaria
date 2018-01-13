@@ -1484,5 +1484,9 @@ static unichar ClosingBraceForOpeningBrace(unichar c)
     [self display]; // To reflect the new values in the view
 }
 
+- (void)setCustomColoringBlock:(void (^)(NSLayoutManager *, NSRange))customColoringBlock {
+    [self.syntaxColouring setCustomColoringBlock:customColoringBlock];
+}
+
 
 @end

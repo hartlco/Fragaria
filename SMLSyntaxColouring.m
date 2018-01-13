@@ -471,10 +471,14 @@ static char kcColoursChanged;
         }
         
         if (doColouring) {
-            
-            for (NSInteger i = 0; i < kSMLCountOfSyntaxGroups; i++) {
-                /* Colour all syntax groups */
-                [self colourGroupWithIdentifier:i inRange:effectiveRange withRangeScanner:rangeScanner documentScanner:documentScanner queryingDelegate:self.syntaxColouringDelegate colouringBlock:colourRangeBlock];
+
+            if (self.customColoringBlock != nil) {
+                self.customColoringBlock(self.layoutManager, effectiveRange);
+            } else {
+                for (NSInteger i = 0; i < kSMLCountOfSyntaxGroups; i++) {
+                    /* Colour all syntax groups */
+                    [self colourGroupWithIdentifier:i inRange:effectiveRange withRangeScanner:rangeScanner documentScanner:documentScanner queryingDelegate:self.syntaxColouringDelegate colouringBlock:colourRangeBlock];
+                }
             }
 
             //
@@ -1242,6 +1246,7 @@ static char kcColoursChanged;
         }
         i = NSMaxRange(effectiveRange);
     }
+    
 	[layoutManager addTemporaryAttributes:colourDictionary forCharacterRange:range];
 }
 
