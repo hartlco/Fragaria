@@ -44,7 +44,7 @@
 	<key>secondSingleLineComment</key>
 	<string></string>
 	<key>secondString</key>
-	<string>`</string>
+	<string></string>
 	<key>singleLineCommentRegex</key>
 	<string>\n?\s?(?&lt;![a-zA-Z0-9/])&gt;\s</string>
 	<key>variableRegex</key>
